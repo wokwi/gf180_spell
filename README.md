@@ -1,10 +1,13 @@
-# Caravel User Project
+# SPELL for GF180
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![UPRJ_CI](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml) [![Caravel Build](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml)
+SPELL is a minimalist, stack-based programming language developed for [The Skull CTF](https://skullctf.com).
 
-| :exclamation: Important Note            |
-|-----------------------------------------|
+The language is defined by [a cryptic piece of Arduino code](https://skullctf.com/spell). 
 
-## Please fill in your project documentation in this README.md file 
+![SPELL](docs/spell.png)
 
-Refer to [README](docs/source/index.rst) for this sample project documentation. 
+The repository wraps the [verispell project](https://github.com/wokwi/verispell), a verilog SPELL implementation, for the [GFMPW-0 Open Silicon Shuttle](https://platform.efabless.com/shuttles/GFMPW-0).
+
+# License
+
+This project is [licensed under Apache 2](LICENSE)
