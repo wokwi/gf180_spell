@@ -70,40 +70,39 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
-user_proj_example mprj (
+spell spell(
 `ifdef USE_POWER_PINS
-	.vdd(vdd),	// User area 1 1.8V power
+	.vdd(vdd),	// User area 1 5V power
 	.vss(vss),	// User area 1 digital ground
 `endif
 
-    .wb_clk_i(wb_clk_i),
-    .wb_rst_i(wb_rst_i),
+    // Logic analyzer
+    .i_la_wb_disable(la_data_in[1]),
+    .i_la_write(la_data_in[2]),
+    .i_la_addr(la_data_in[14:8]),
+    .i_la_data(la_data_in[23:16]),
+    .la_data_out(la_data_out[31:0]),
 
-    // MGMT SoC Wishbone Slave
+    // Wishbone slave
+    .i_wb_cyc(wbs_cyc_i),
+    .i_wb_stb(wbs_stb_i),
+    .i_wb_we(wbs_we_i),
+    .i_wb_addr(wbs_adr_i),
+    .i_wb_data(wbs_dat_i),
+    .o_wb_ack(wbs_ack_o),
+    .o_wb_data(wbs_dat_o),
 
-    .wbs_cyc_i(wbs_cyc_i),
-    .wbs_stb_i(wbs_stb_i),
-    .wbs_we_i(wbs_we_i),
-    .wbs_sel_i(wbs_sel_i),
-    .wbs_adr_i(wbs_adr_i),
-    .wbs_dat_i(wbs_dat_i),
-    .wbs_ack_o(wbs_ack_o),
-    .wbs_dat_o(wbs_dat_o),
+    // RAMBus ports - unused
+    .rambus_wb_ack_i   (0),
+    .rambus_wb_dat_i   (0),
 
-    // Logic Analyzer
+    // IO pins
+    .io_in(io_in[15:8]),
+    .io_out(io_out[15:8]),
+    .io_oeb(io_oeb[15:8]),
 
-    .la_data_in(la_data_in),
-    .la_data_out(la_data_out),
-    .la_oenb (la_oenb),
-
-    // IO Pads
-
-    .io_in (io_in),
-    .io_out(io_out),
-    .io_oeb(io_oeb),
-
-    // IRQ
-    .irq(user_irq)
+    // Interrupts
+    .interrupt(user_irq[0])
 );
 
 endmodule	// user_project_wrapper
