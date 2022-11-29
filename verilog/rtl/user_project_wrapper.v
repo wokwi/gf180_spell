@@ -93,8 +93,10 @@ spell spell(
     .o_wb_data(wbs_dat_o),
 
     // RAMBus ports - unused
-    .rambus_wb_ack_i   (0),
-    .rambus_wb_dat_i   (0),
+//    .rambus_wb_ack_i   (0),
+ //   .rambus_wb_dat_i   (0),
+    .reset(wb_rst_i),
+    .clock(wb_clk_i),
 
     // IO pins
     .io_in(io_in[15:8]),
