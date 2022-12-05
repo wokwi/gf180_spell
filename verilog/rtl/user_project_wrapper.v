@@ -70,11 +70,25 @@ module user_project_wrapper #(
 /* User project is instantiated  here   */
 /*--------------------------------------*/
 
+wire rambus_wb_clk;
+wire rambus_wb_rst;
+wire rambus_wb_stb;
+wire rambus_wb_cyc;
+wire rambus_wb_we;
+wire [3:0]rambus_wb_sel;
+wire [31:0]rambus_wb_dat_i;
+wire [9:0]rambus_wb_addr;
+wire rambus_wb_ack;
+wire [31:0]rambus_wb_dat_o;
+
 spell spell(
 `ifdef USE_POWER_PINS
 	.vdd(vdd),	// User area 1 5V power
 	.vss(vss),	// User area 1 digital ground
 `endif
+
+    .reset(wb_rst_i),
+    .clock(wb_clk_i),
 
     // Logic analyzer
     .i_la_wb_disable(la_data_in[1]),
@@ -92,11 +106,17 @@ spell spell(
     .o_wb_ack(wbs_ack_o),
     .o_wb_data(wbs_dat_o),
 
-    // RAMBus ports - unused
-//    .rambus_wb_ack_i   (0),
- //   .rambus_wb_dat_i   (0),
-    .reset(wb_rst_i),
-    .clock(wb_clk_i),
+    // RAMBus port
+    .rambus_wb_clk_o(rambus_wb_clk),
+    .rambus_wb_rst_o(rambus_wb_rst),
+    .rambus_wb_stb_o(rambus_wb_stb),
+    .rambus_wb_cyc_o(rambus_wb_cyc),
+    .rambus_wb_we_o(rambus_wb_we),
+    .rambus_wb_sel_o(rambus_wb_sel),
+    .rambus_wb_dat_o(rambus_wb_dat_i),
+    .rambus_wb_addr_o(rambus_wb_addr),
+    .rambus_wb_ack_i(rambus_wb_ack),
+    .rambus_wb_dat_i(rambus_wb_dat_o),
 
     // IO pins
     .io_in(io_in[15:8]),
@@ -105,6 +125,24 @@ spell spell(
 
     // Interrupts
     .interrupt(user_irq[0])
+);
+
+rambus rambus0 (
+`ifdef USE_POWER_PINS
+	.vdd(vdd),	// User area 1 5V power
+	.vss(vss),	// User area 1 digital ground
+`endif
+
+    .rambus_wb_clk_i(rambus_wb_clk),
+    .rambus_wb_rst_i(rambus_wb_rst),
+    .rambus_wb_stb_i(rambus_wb_stb),
+    .rambus_wb_cyc_i(rambus_wb_cyc),
+    .rambus_wb_we_i(rambus_wb_we), 
+    .rambus_wb_sel_i(rambus_wb_sel),
+    .rambus_wb_dat_i(rambus_wb_dat_i), 
+    .rambus_wb_addr_i(rambus_wb_addr[8:0]),
+    .rambus_wb_ack_o(rambus_wb_ack),
+    .rambus_wb_dat_o(rambus_wb_dat_o) 
 );
 
 endmodule	// user_project_wrapper

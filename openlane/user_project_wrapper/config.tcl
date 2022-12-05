@@ -41,7 +41,8 @@ set ::env(CLOCK_PERIOD) "10"
 ## Internal Macros
 ### Macro PDN Connections
 set ::env(FP_PDN_MACRO_HOOKS) "\
-	spell vdd vss vdd vss"
+	spell vdd vss vdd vss, \
+	rambus0 vdd vss vdd vss"
 
 ### Macro Placement
 set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg
@@ -49,13 +50,16 @@ set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$::env(DESIGN_DIR)/../../verilog/rtl/spell_bb.v"
+	$::env(DESIGN_DIR)/../../verilog/rtl/spell_bb.v \
+	$::env(DESIGN_DIR)/../../verilog/rtl/rambus/rambus.v"
 
 set ::env(EXTRA_LEFS) "\
-	$::env(DESIGN_DIR)/../../lef/spell.lef"
+	$::env(DESIGN_DIR)/../../lef/spell.lef\
+	$::env(DESIGN_DIR)/../../lef/rambus.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-	$::env(DESIGN_DIR)/../../gds/spell.gds"
+	$::env(DESIGN_DIR)/../../gds/spell.gds\
+	$::env(DESIGN_DIR)/../../gds/rambus.gds"
 
 set ::env(RT_MAX_LAYER) {Metal4}
 
