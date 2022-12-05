@@ -107,6 +107,20 @@ spell spell(
     .interrupt(user_irq[0])
 );
 
+gf180mcu_fd_ip_sram__sram512x8m8wm1 sram (
+`ifdef USE_POWER_PINS
+    .VDD(vdd),	// User area 1 1.8V power
+    .VSS(vss),	// User area 1 digital ground
+`endif
+    .CLK(wb_clk_i),
+    .A(adr_mem),
+    .D(memdatout[7:0]),
+    .Q(memdatin0[7:0]),
+    .GWEN(memrwb),
+    .CEN(memenb[0]),
+    .WEN({8{cpuen}})
+);
+
 endmodule	// user_project_wrapper
 
 `default_nettype wire
