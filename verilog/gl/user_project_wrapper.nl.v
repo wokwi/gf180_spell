@@ -36,7 +36,174 @@ module user_project_wrapper (user_clock2,
  output [31:0] wbs_dat_o;
  input [3:0] wbs_sel_i;
 
+ wire rambus_wb_ack;
+ wire \rambus_wb_addr[0] ;
+ wire \rambus_wb_addr[1] ;
+ wire \rambus_wb_addr[2] ;
+ wire \rambus_wb_addr[3] ;
+ wire \rambus_wb_addr[4] ;
+ wire \rambus_wb_addr[5] ;
+ wire \rambus_wb_addr[6] ;
+ wire \rambus_wb_addr[7] ;
+ wire \rambus_wb_addr[8] ;
+ wire \rambus_wb_addr[9] ;
+ wire rambus_wb_clk;
+ wire rambus_wb_cyc;
+ wire \rambus_wb_dat_i[0] ;
+ wire \rambus_wb_dat_i[10] ;
+ wire \rambus_wb_dat_i[11] ;
+ wire \rambus_wb_dat_i[12] ;
+ wire \rambus_wb_dat_i[13] ;
+ wire \rambus_wb_dat_i[14] ;
+ wire \rambus_wb_dat_i[15] ;
+ wire \rambus_wb_dat_i[16] ;
+ wire \rambus_wb_dat_i[17] ;
+ wire \rambus_wb_dat_i[18] ;
+ wire \rambus_wb_dat_i[19] ;
+ wire \rambus_wb_dat_i[1] ;
+ wire \rambus_wb_dat_i[20] ;
+ wire \rambus_wb_dat_i[21] ;
+ wire \rambus_wb_dat_i[22] ;
+ wire \rambus_wb_dat_i[23] ;
+ wire \rambus_wb_dat_i[24] ;
+ wire \rambus_wb_dat_i[25] ;
+ wire \rambus_wb_dat_i[26] ;
+ wire \rambus_wb_dat_i[27] ;
+ wire \rambus_wb_dat_i[28] ;
+ wire \rambus_wb_dat_i[29] ;
+ wire \rambus_wb_dat_i[2] ;
+ wire \rambus_wb_dat_i[30] ;
+ wire \rambus_wb_dat_i[31] ;
+ wire \rambus_wb_dat_i[3] ;
+ wire \rambus_wb_dat_i[4] ;
+ wire \rambus_wb_dat_i[5] ;
+ wire \rambus_wb_dat_i[6] ;
+ wire \rambus_wb_dat_i[7] ;
+ wire \rambus_wb_dat_i[8] ;
+ wire \rambus_wb_dat_i[9] ;
+ wire \rambus_wb_dat_o[0] ;
+ wire \rambus_wb_dat_o[10] ;
+ wire \rambus_wb_dat_o[11] ;
+ wire \rambus_wb_dat_o[12] ;
+ wire \rambus_wb_dat_o[13] ;
+ wire \rambus_wb_dat_o[14] ;
+ wire \rambus_wb_dat_o[15] ;
+ wire \rambus_wb_dat_o[16] ;
+ wire \rambus_wb_dat_o[17] ;
+ wire \rambus_wb_dat_o[18] ;
+ wire \rambus_wb_dat_o[19] ;
+ wire \rambus_wb_dat_o[1] ;
+ wire \rambus_wb_dat_o[20] ;
+ wire \rambus_wb_dat_o[21] ;
+ wire \rambus_wb_dat_o[22] ;
+ wire \rambus_wb_dat_o[23] ;
+ wire \rambus_wb_dat_o[24] ;
+ wire \rambus_wb_dat_o[25] ;
+ wire \rambus_wb_dat_o[26] ;
+ wire \rambus_wb_dat_o[27] ;
+ wire \rambus_wb_dat_o[28] ;
+ wire \rambus_wb_dat_o[29] ;
+ wire \rambus_wb_dat_o[2] ;
+ wire \rambus_wb_dat_o[30] ;
+ wire \rambus_wb_dat_o[31] ;
+ wire \rambus_wb_dat_o[3] ;
+ wire \rambus_wb_dat_o[4] ;
+ wire \rambus_wb_dat_o[5] ;
+ wire \rambus_wb_dat_o[6] ;
+ wire \rambus_wb_dat_o[7] ;
+ wire \rambus_wb_dat_o[8] ;
+ wire \rambus_wb_dat_o[9] ;
+ wire rambus_wb_rst;
+ wire \rambus_wb_sel[0] ;
+ wire \rambus_wb_sel[1] ;
+ wire \rambus_wb_sel[2] ;
+ wire \rambus_wb_sel[3] ;
+ wire rambus_wb_stb;
+ wire rambus_wb_we;
 
+ rambus rambus0 (.rambus_wb_ack_o(rambus_wb_ack),
+    .rambus_wb_clk_i(rambus_wb_clk),
+    .rambus_wb_cyc_i(rambus_wb_cyc),
+    .rambus_wb_rst_i(rambus_wb_rst),
+    .rambus_wb_stb_i(rambus_wb_stb),
+    .rambus_wb_we_i(rambus_wb_we),
+    .rambus_wb_addr_i({\rambus_wb_addr[8] ,
+    \rambus_wb_addr[7] ,
+    \rambus_wb_addr[6] ,
+    \rambus_wb_addr[5] ,
+    \rambus_wb_addr[4] ,
+    \rambus_wb_addr[3] ,
+    \rambus_wb_addr[2] ,
+    \rambus_wb_addr[1] ,
+    \rambus_wb_addr[0] }),
+    .rambus_wb_dat_i({\rambus_wb_dat_i[31] ,
+    \rambus_wb_dat_i[30] ,
+    \rambus_wb_dat_i[29] ,
+    \rambus_wb_dat_i[28] ,
+    \rambus_wb_dat_i[27] ,
+    \rambus_wb_dat_i[26] ,
+    \rambus_wb_dat_i[25] ,
+    \rambus_wb_dat_i[24] ,
+    \rambus_wb_dat_i[23] ,
+    \rambus_wb_dat_i[22] ,
+    \rambus_wb_dat_i[21] ,
+    \rambus_wb_dat_i[20] ,
+    \rambus_wb_dat_i[19] ,
+    \rambus_wb_dat_i[18] ,
+    \rambus_wb_dat_i[17] ,
+    \rambus_wb_dat_i[16] ,
+    \rambus_wb_dat_i[15] ,
+    \rambus_wb_dat_i[14] ,
+    \rambus_wb_dat_i[13] ,
+    \rambus_wb_dat_i[12] ,
+    \rambus_wb_dat_i[11] ,
+    \rambus_wb_dat_i[10] ,
+    \rambus_wb_dat_i[9] ,
+    \rambus_wb_dat_i[8] ,
+    \rambus_wb_dat_i[7] ,
+    \rambus_wb_dat_i[6] ,
+    \rambus_wb_dat_i[5] ,
+    \rambus_wb_dat_i[4] ,
+    \rambus_wb_dat_i[3] ,
+    \rambus_wb_dat_i[2] ,
+    \rambus_wb_dat_i[1] ,
+    \rambus_wb_dat_i[0] }),
+    .rambus_wb_dat_o({\rambus_wb_dat_o[31] ,
+    \rambus_wb_dat_o[30] ,
+    \rambus_wb_dat_o[29] ,
+    \rambus_wb_dat_o[28] ,
+    \rambus_wb_dat_o[27] ,
+    \rambus_wb_dat_o[26] ,
+    \rambus_wb_dat_o[25] ,
+    \rambus_wb_dat_o[24] ,
+    \rambus_wb_dat_o[23] ,
+    \rambus_wb_dat_o[22] ,
+    \rambus_wb_dat_o[21] ,
+    \rambus_wb_dat_o[20] ,
+    \rambus_wb_dat_o[19] ,
+    \rambus_wb_dat_o[18] ,
+    \rambus_wb_dat_o[17] ,
+    \rambus_wb_dat_o[16] ,
+    \rambus_wb_dat_o[15] ,
+    \rambus_wb_dat_o[14] ,
+    \rambus_wb_dat_o[13] ,
+    \rambus_wb_dat_o[12] ,
+    \rambus_wb_dat_o[11] ,
+    \rambus_wb_dat_o[10] ,
+    \rambus_wb_dat_o[9] ,
+    \rambus_wb_dat_o[8] ,
+    \rambus_wb_dat_o[7] ,
+    \rambus_wb_dat_o[6] ,
+    \rambus_wb_dat_o[5] ,
+    \rambus_wb_dat_o[4] ,
+    \rambus_wb_dat_o[3] ,
+    \rambus_wb_dat_o[2] ,
+    \rambus_wb_dat_o[1] ,
+    \rambus_wb_dat_o[0] }),
+    .rambus_wb_sel_i({\rambus_wb_sel[3] ,
+    \rambus_wb_sel[2] ,
+    \rambus_wb_sel[1] ,
+    \rambus_wb_sel[0] }));
  spell spell (.clock(wb_clk_i),
     .i_la_wb_disable(la_data_in[1]),
     .i_la_write(la_data_in[2]),
@@ -45,6 +212,12 @@ module user_project_wrapper (user_clock2,
     .i_wb_we(wbs_we_i),
     .interrupt(user_irq[0]),
     .o_wb_ack(wbs_ack_o),
+    .rambus_wb_ack_i(rambus_wb_ack),
+    .rambus_wb_clk_o(rambus_wb_clk),
+    .rambus_wb_cyc_o(rambus_wb_cyc),
+    .rambus_wb_rst_o(rambus_wb_rst),
+    .rambus_wb_stb_o(rambus_wb_stb),
+    .rambus_wb_we_o(rambus_wb_we),
     .reset(wb_rst_i),
     .i_la_addr({la_data_in[14],
     la_data_in[13],
@@ -213,83 +386,83 @@ module user_project_wrapper (user_clock2,
     wbs_dat_o[2],
     wbs_dat_o[1],
     wbs_dat_o[0]}),
-    .rambus_wb_addr_o({_NC1,
-    _NC2,
-    _NC3,
-    _NC4,
-    _NC5,
-    _NC6,
-    _NC7,
-    _NC8,
-    _NC9,
-    _NC10}),
-    .rambus_wb_dat_i({_NC11,
-    _NC12,
-    _NC13,
-    _NC14,
-    _NC15,
-    _NC16,
-    _NC17,
-    _NC18,
-    _NC19,
-    _NC20,
-    _NC21,
-    _NC22,
-    _NC23,
-    _NC24,
-    _NC25,
-    _NC26,
-    _NC27,
-    _NC28,
-    _NC29,
-    _NC30,
-    _NC31,
-    _NC32,
-    _NC33,
-    _NC34,
-    _NC35,
-    _NC36,
-    _NC37,
-    _NC38,
-    _NC39,
-    _NC40,
-    _NC41,
-    _NC42}),
-    .rambus_wb_dat_o({_NC43,
-    _NC44,
-    _NC45,
-    _NC46,
-    _NC47,
-    _NC48,
-    _NC49,
-    _NC50,
-    _NC51,
-    _NC52,
-    _NC53,
-    _NC54,
-    _NC55,
-    _NC56,
-    _NC57,
-    _NC58,
-    _NC59,
-    _NC60,
-    _NC61,
-    _NC62,
-    _NC63,
-    _NC64,
-    _NC65,
-    _NC66,
-    _NC67,
-    _NC68,
-    _NC69,
-    _NC70,
-    _NC71,
-    _NC72,
-    _NC73,
-    _NC74}),
-    .rambus_wb_sel_o({_NC75,
-    _NC76,
-    _NC77,
-    _NC78}));
+    .rambus_wb_addr_o({\rambus_wb_addr[9] ,
+    \rambus_wb_addr[8] ,
+    \rambus_wb_addr[7] ,
+    \rambus_wb_addr[6] ,
+    \rambus_wb_addr[5] ,
+    \rambus_wb_addr[4] ,
+    \rambus_wb_addr[3] ,
+    \rambus_wb_addr[2] ,
+    \rambus_wb_addr[1] ,
+    \rambus_wb_addr[0] }),
+    .rambus_wb_dat_i({\rambus_wb_dat_o[31] ,
+    \rambus_wb_dat_o[30] ,
+    \rambus_wb_dat_o[29] ,
+    \rambus_wb_dat_o[28] ,
+    \rambus_wb_dat_o[27] ,
+    \rambus_wb_dat_o[26] ,
+    \rambus_wb_dat_o[25] ,
+    \rambus_wb_dat_o[24] ,
+    \rambus_wb_dat_o[23] ,
+    \rambus_wb_dat_o[22] ,
+    \rambus_wb_dat_o[21] ,
+    \rambus_wb_dat_o[20] ,
+    \rambus_wb_dat_o[19] ,
+    \rambus_wb_dat_o[18] ,
+    \rambus_wb_dat_o[17] ,
+    \rambus_wb_dat_o[16] ,
+    \rambus_wb_dat_o[15] ,
+    \rambus_wb_dat_o[14] ,
+    \rambus_wb_dat_o[13] ,
+    \rambus_wb_dat_o[12] ,
+    \rambus_wb_dat_o[11] ,
+    \rambus_wb_dat_o[10] ,
+    \rambus_wb_dat_o[9] ,
+    \rambus_wb_dat_o[8] ,
+    \rambus_wb_dat_o[7] ,
+    \rambus_wb_dat_o[6] ,
+    \rambus_wb_dat_o[5] ,
+    \rambus_wb_dat_o[4] ,
+    \rambus_wb_dat_o[3] ,
+    \rambus_wb_dat_o[2] ,
+    \rambus_wb_dat_o[1] ,
+    \rambus_wb_dat_o[0] }),
+    .rambus_wb_dat_o({\rambus_wb_dat_i[31] ,
+    \rambus_wb_dat_i[30] ,
+    \rambus_wb_dat_i[29] ,
+    \rambus_wb_dat_i[28] ,
+    \rambus_wb_dat_i[27] ,
+    \rambus_wb_dat_i[26] ,
+    \rambus_wb_dat_i[25] ,
+    \rambus_wb_dat_i[24] ,
+    \rambus_wb_dat_i[23] ,
+    \rambus_wb_dat_i[22] ,
+    \rambus_wb_dat_i[21] ,
+    \rambus_wb_dat_i[20] ,
+    \rambus_wb_dat_i[19] ,
+    \rambus_wb_dat_i[18] ,
+    \rambus_wb_dat_i[17] ,
+    \rambus_wb_dat_i[16] ,
+    \rambus_wb_dat_i[15] ,
+    \rambus_wb_dat_i[14] ,
+    \rambus_wb_dat_i[13] ,
+    \rambus_wb_dat_i[12] ,
+    \rambus_wb_dat_i[11] ,
+    \rambus_wb_dat_i[10] ,
+    \rambus_wb_dat_i[9] ,
+    \rambus_wb_dat_i[8] ,
+    \rambus_wb_dat_i[7] ,
+    \rambus_wb_dat_i[6] ,
+    \rambus_wb_dat_i[5] ,
+    \rambus_wb_dat_i[4] ,
+    \rambus_wb_dat_i[3] ,
+    \rambus_wb_dat_i[2] ,
+    \rambus_wb_dat_i[1] ,
+    \rambus_wb_dat_i[0] }),
+    .rambus_wb_sel_o({\rambus_wb_sel[3] ,
+    \rambus_wb_sel[2] ,
+    \rambus_wb_sel[1] ,
+    \rambus_wb_sel[0] }));
 endmodule
 

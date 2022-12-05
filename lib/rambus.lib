@@ -1,0 +1,2152 @@
+library (rambus) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,pF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1A";
+  pulling_resistance_unit        : "1ohm";
+  time_unit                      : "1ns";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 30;
+  slew_lower_threshold_pct_fall : 30;
+  slew_upper_threshold_pct_rise : 70;
+  slew_upper_threshold_pct_fall : 70;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 25.0;
+  nom_voltage                    : 5.00;
+
+  lu_table_template(template_1) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_10) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_11) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_12) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_13) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_14) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_15) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_16) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_17) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_18) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_19) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_2) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_20) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_21) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_22) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_23) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_24) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_25) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_26) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_27) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_28) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_29) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_3) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_30) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_31) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_32) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_33) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_34) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_35) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_36) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_37) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_38) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_39) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_4) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_40) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_41) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_42) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_43) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_44) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_45) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_46) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_47) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_48) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_49) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_5) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_50) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_51) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_52) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_53) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_54) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_55) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_56) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_57) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_58) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_59) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_6) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_60) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_61) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_62) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_63) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_64) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_65) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_66) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_7) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_8) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  lu_table_template(template_9) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00100,  0.00758,  0.03066,  0.07475,  0.14340,  0.23980,  0.36660,  0.52640,  0.72140,  0.95390");
+  }
+  type ("rambus_wb_addr_i") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 9;
+    bit_from : 8;
+    bit_to : 0;
+  }
+  type ("rambus_wb_dat_i") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 32;
+    bit_from : 31;
+    bit_to : 0;
+  }
+  type ("rambus_wb_dat_o") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 32;
+    bit_from : 31;
+    bit_to : 0;
+  }
+  type ("rambus_wb_sel_i") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 4;
+    bit_from : 3;
+    bit_to : 0;
+  }
+
+  cell ("rambus") {
+    pin("rambus_wb_ack_o") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_1) {
+          values("10.03021,10.06646,10.15529,10.27556,10.43966,10.66263,10.95768,11.32926,11.77973,12.31773");
+	}
+	rise_transition(template_1) {
+          values("0.17117,0.20612,0.28886,0.43021,0.68462,1.07296,1.58490,2.23180,3.02511,3.97584");
+	}
+	cell_fall(template_2) {
+          values("9.00748,9.04014,9.12254,9.24637,9.42081,9.66027,9.97388,10.36749,10.85027,11.42667");
+	}
+	fall_transition(template_2) {
+          values("0.13659,0.16941,0.25626,0.41332,0.67385,1.05774,1.57028,2.22464,3.03161,3.99857");
+	}
+      }
+    }
+    pin("rambus_wb_clk_i") {
+      direction : input;
+      capacitance : 0.4002;
+    }
+    pin("rambus_wb_cyc_i") {
+      direction : input;
+      capacitance : 0.0047;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.18512");
+	}
+	fall_constraint(scalar) {
+          values("-0.00112");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("19.01381");
+	}
+	fall_constraint(scalar) {
+          values("18.37974");
+	}
+      }
+    }
+    pin("rambus_wb_rst_i") {
+      direction : input;
+      capacitance : 0.0068;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("1.86864");
+	}
+	fall_constraint(scalar) {
+          values("1.96874");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("15.85924");
+	}
+	fall_constraint(scalar) {
+          values("17.30326");
+	}
+      }
+    }
+    pin("rambus_wb_stb_i") {
+      direction : input;
+      capacitance : 0.0061;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.44504");
+	}
+	fall_constraint(scalar) {
+          values("-0.16551");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("19.30109");
+	}
+	fall_constraint(scalar) {
+          values("18.56144");
+	}
+      }
+    }
+    pin("rambus_wb_we_i") {
+      direction : input;
+      capacitance : 0.0063;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.22789");
+	}
+	fall_constraint(scalar) {
+          values("0.24872");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("15.84798");
+	}
+	fall_constraint(scalar) {
+          values("14.50700");
+	}
+      }
+    }
+    pin("vdd") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("vss") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    bus("rambus_wb_addr_i") {
+      bus_type : rambus_wb_addr_i;
+      direction : input;
+      capacitance : 0.0000;
+    pin("rambus_wb_addr_i[8]") {
+      direction : input;
+      capacitance : 0.0070;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.24723");
+	}
+	fall_constraint(scalar) {
+          values("-0.23177");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("13.11578");
+	}
+	fall_constraint(scalar) {
+          values("14.52190");
+	}
+      }
+    }
+    pin("rambus_wb_addr_i[7]") {
+      direction : input;
+      capacitance : 0.0047;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.97654");
+	}
+	fall_constraint(scalar) {
+          values("-0.14155");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("19.70209");
+	}
+	fall_constraint(scalar) {
+          values("17.43493");
+	}
+      }
+    }
+    pin("rambus_wb_addr_i[6]") {
+      direction : input;
+      capacitance : 0.0075;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.63258");
+	}
+	fall_constraint(scalar) {
+          values("0.49914");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("15.84042");
+	}
+	fall_constraint(scalar) {
+          values("14.45854");
+	}
+      }
+    }
+    pin("rambus_wb_addr_i[5]") {
+      direction : input;
+      capacitance : 0.0081;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-3.24847");
+	}
+	fall_constraint(scalar) {
+          values("-3.55239");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("21.47043");
+	}
+	fall_constraint(scalar) {
+          values("20.94821");
+	}
+      }
+    }
+    pin("rambus_wb_addr_i[4]") {
+      direction : input;
+      capacitance : 0.0056;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-2.98004");
+	}
+	fall_constraint(scalar) {
+          values("-3.84003");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("24.60899");
+	}
+	fall_constraint(scalar) {
+          values("23.63950");
+	}
+      }
+    }
+    pin("rambus_wb_addr_i[3]") {
+      direction : input;
+      capacitance : 0.0070;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-3.37050");
+	}
+	fall_constraint(scalar) {
+          values("-4.80509");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("25.29567");
+	}
+	fall_constraint(scalar) {
+          values("24.42561");
+	}
+      }
+    }
+    pin("rambus_wb_addr_i[2]") {
+      direction : input;
+      capacitance : 0.0066;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-3.71301");
+	}
+	fall_constraint(scalar) {
+          values("-3.96614");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("23.39489");
+	}
+	fall_constraint(scalar) {
+          values("23.76116");
+	}
+      }
+    }
+    pin("rambus_wb_addr_i[1]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("rambus_wb_addr_i[0]") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    }
+    bus("rambus_wb_dat_i") {
+      bus_type : rambus_wb_dat_i;
+      direction : input;
+      capacitance : 0.0000;
+    pin("rambus_wb_dat_i[31]") {
+      direction : input;
+      capacitance : 0.0063;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("1.27240");
+	}
+	fall_constraint(scalar) {
+          values("0.99843");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("7.00216");
+	}
+	fall_constraint(scalar) {
+          values("7.45071");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[30]") {
+      direction : input;
+      capacitance : 0.0063;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.97275");
+	}
+	fall_constraint(scalar) {
+          values("-0.87286");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("9.24572");
+	}
+	fall_constraint(scalar) {
+          values("10.16082");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[29]") {
+      direction : input;
+      capacitance : 0.0056;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.69319");
+	}
+	fall_constraint(scalar) {
+          values("1.27055");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("4.91064");
+	}
+	fall_constraint(scalar) {
+          values("4.56809");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[28]") {
+      direction : input;
+      capacitance : 0.0067;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.54475");
+	}
+	fall_constraint(scalar) {
+          values("0.01436");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("8.79749");
+	}
+	fall_constraint(scalar) {
+          values("8.58665");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[27]") {
+      direction : input;
+      capacitance : 0.0060;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("1.31738");
+	}
+	fall_constraint(scalar) {
+          values("1.06205");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("7.31594");
+	}
+	fall_constraint(scalar) {
+          values("7.84783");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[26]") {
+      direction : input;
+      capacitance : 0.0060;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.57263");
+	}
+	fall_constraint(scalar) {
+          values("-0.53763");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("8.91041");
+	}
+	fall_constraint(scalar) {
+          values("9.25291");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[25]") {
+      direction : input;
+      capacitance : 0.0056;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.97426");
+	}
+	fall_constraint(scalar) {
+          values("1.34981");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.24431");
+	}
+	fall_constraint(scalar) {
+          values("5.78843");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[24]") {
+      direction : input;
+      capacitance : 0.0049;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.77650");
+	}
+	fall_constraint(scalar) {
+          values("-0.27363");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("9.52874");
+	}
+	fall_constraint(scalar) {
+          values("9.36401");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[23]") {
+      direction : input;
+      capacitance : 0.0062;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.27115");
+	}
+	fall_constraint(scalar) {
+          values("0.56754");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.97864");
+	}
+	fall_constraint(scalar) {
+          values("7.31631");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[22]") {
+      direction : input;
+      capacitance : 0.0071;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.42620");
+	}
+	fall_constraint(scalar) {
+          values("0.08155");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.63268");
+	}
+	fall_constraint(scalar) {
+          values("9.12293");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[21]") {
+      direction : input;
+      capacitance : 0.0067;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.80342");
+	}
+	fall_constraint(scalar) {
+          values("1.09943");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.14642");
+	}
+	fall_constraint(scalar) {
+          values("6.64246");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[20]") {
+      direction : input;
+      capacitance : 0.0048;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.18102");
+	}
+	fall_constraint(scalar) {
+          values("-0.42820");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.44868");
+	}
+	fall_constraint(scalar) {
+          values("7.66666");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[19]") {
+      direction : input;
+      capacitance : 0.0052;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.00320");
+	}
+	fall_constraint(scalar) {
+          values("0.05566");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.47410");
+	}
+	fall_constraint(scalar) {
+          values("7.58731");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[18]") {
+      direction : input;
+      capacitance : 0.0055;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.06768");
+	}
+	fall_constraint(scalar) {
+          values("0.49346");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.09366");
+	}
+	fall_constraint(scalar) {
+          values("6.10277");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[17]") {
+      direction : input;
+      capacitance : 0.0071;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("1.72588");
+	}
+	fall_constraint(scalar) {
+          values("1.51236");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("5.22235");
+	}
+	fall_constraint(scalar) {
+          values("5.96764");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[16]") {
+      direction : input;
+      capacitance : 0.0065;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.66751");
+	}
+	fall_constraint(scalar) {
+          values("1.28194");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("5.62881");
+	}
+	fall_constraint(scalar) {
+          values("6.12093");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[15]") {
+      direction : input;
+      capacitance : 0.0065;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("1.59255");
+	}
+	fall_constraint(scalar) {
+          values("1.28338");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("4.76721");
+	}
+	fall_constraint(scalar) {
+          values("5.51667");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[14]") {
+      direction : input;
+      capacitance : 0.0056;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("1.00163");
+	}
+	fall_constraint(scalar) {
+          values("1.46356");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("5.74984");
+	}
+	fall_constraint(scalar) {
+          values("5.63732");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[13]") {
+      direction : input;
+      capacitance : 0.0058;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.94748");
+	}
+	fall_constraint(scalar) {
+          values("-1.02768");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.44985");
+	}
+	fall_constraint(scalar) {
+          values("6.87388");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[12]") {
+      direction : input;
+      capacitance : 0.0063;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.61993");
+	}
+	fall_constraint(scalar) {
+          values("0.22922");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.44402");
+	}
+	fall_constraint(scalar) {
+          values("7.72004");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[11]") {
+      direction : input;
+      capacitance : 0.0057;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.78259");
+	}
+	fall_constraint(scalar) {
+          values("0.48713");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.52538");
+	}
+	fall_constraint(scalar) {
+          values("6.16701");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[10]") {
+      direction : input;
+      capacitance : 0.0047;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.49768");
+	}
+	fall_constraint(scalar) {
+          values("0.50272");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("7.57629");
+	}
+	fall_constraint(scalar) {
+          values("8.62182");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[9]") {
+      direction : input;
+      capacitance : 0.0071;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-1.00125");
+	}
+	fall_constraint(scalar) {
+          values("-0.70094");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("9.29673");
+	}
+	fall_constraint(scalar) {
+          values("9.47439");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[8]") {
+      direction : input;
+      capacitance : 0.0053;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.14978");
+	}
+	fall_constraint(scalar) {
+          values("0.20262");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("6.81257");
+	}
+	fall_constraint(scalar) {
+          values("8.08795");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[7]") {
+      direction : input;
+      capacitance : 0.0105;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-1.11289");
+	}
+	fall_constraint(scalar) {
+          values("-1.03046");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("5.90853");
+	}
+	fall_constraint(scalar) {
+          values("6.38091");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[6]") {
+      direction : input;
+      capacitance : 0.0060;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("1.18452");
+	}
+	fall_constraint(scalar) {
+          values("1.56298");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("4.86806");
+	}
+	fall_constraint(scalar) {
+          values("5.74929");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[5]") {
+      direction : input;
+      capacitance : 0.0048;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("1.67128");
+	}
+	fall_constraint(scalar) {
+          values("1.60550");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("5.84061");
+	}
+	fall_constraint(scalar) {
+          values("6.14458");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[4]") {
+      direction : input;
+      capacitance : 0.0049;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("1.75908");
+	}
+	fall_constraint(scalar) {
+          values("1.80621");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("4.55863");
+	}
+	fall_constraint(scalar) {
+          values("4.69540");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[3]") {
+      direction : input;
+      capacitance : 0.0069;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.78102");
+	}
+	fall_constraint(scalar) {
+          values("0.40794");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("2.70369");
+	}
+	fall_constraint(scalar) {
+          values("3.82629");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[2]") {
+      direction : input;
+      capacitance : 0.0063;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.83763");
+	}
+	fall_constraint(scalar) {
+          values("0.47903");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("5.26049");
+	}
+	fall_constraint(scalar) {
+          values("6.00839");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[1]") {
+      direction : input;
+      capacitance : 0.0063;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("2.05390");
+	}
+	fall_constraint(scalar) {
+          values("1.89368");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("2.10294");
+	}
+	fall_constraint(scalar) {
+          values("3.29047");
+	}
+      }
+    }
+    pin("rambus_wb_dat_i[0]") {
+      direction : input;
+      capacitance : 0.0048;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.99547");
+	}
+	fall_constraint(scalar) {
+          values("0.95695");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("5.07632");
+	}
+	fall_constraint(scalar) {
+          values("6.10936");
+	}
+      }
+    }
+    }
+    bus("rambus_wb_dat_o") {
+      bus_type : rambus_wb_dat_o;
+      direction : output;
+      capacitance : 0.0000;
+    pin("rambus_wb_dat_o[31]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_51) {
+          values("8.85210,8.88329,8.96029,9.07031,9.22760,9.44829,9.73945,10.10813,10.55929,11.09981");
+	}
+	rise_transition(template_51) {
+          values("0.13169,0.16104,0.23920,0.38661,0.64973,1.03694,1.55529,2.21332,3.02235,3.98249");
+	}
+	cell_fall(template_52) {
+          values("8.27913,8.30735,8.38233,8.49998,8.66963,8.90683,9.21910,9.61510,10.09937,10.67637");
+	}
+	fall_transition(template_52) {
+          values("0.10570,0.13553,0.22000,0.37966,0.64305,1.03520,1.55973,2.22427,3.03473,4.00420");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[30]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_49) {
+          values("9.26091,9.29300,9.37190,9.48357,9.64132,9.86269,10.15423,10.52215,10.97369,11.51307");
+	}
+	rise_transition(template_49) {
+          values("0.13751,0.16814,0.24713,0.39319,0.65472,1.04147,1.55832,2.21408,3.02084,3.98362");
+	}
+	cell_fall(template_50) {
+          values("8.61925,8.64821,8.72461,8.84335,9.01352,9.25044,9.56254,9.95823,10.44223,11.01923");
+	}
+	fall_transition(template_50) {
+          values("0.11152,0.14199,0.22631,0.38585,0.64690,1.03693,1.56031,2.22369,3.03458,4.00458");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[29]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_45) {
+          values("10.43064,10.46714,10.55658,10.67737,10.84193,11.06495,11.36025,11.73219,12.18254,12.72054");
+	}
+	rise_transition(template_45) {
+          values("0.17328,0.20844,0.29141,0.43251,0.68651,1.07502,1.58672,2.23313,3.02559,3.97511");
+	}
+	cell_fall(template_46) {
+          values("9.37966,9.41253,9.49533,9.61947,9.79420,10.03401,10.34771,10.74141,11.22401,11.80032");
+	}
+	fall_transition(template_46) {
+          values("0.13810,0.17119,0.25826,0.41503,0.67567,1.05963,1.57136,2.22518,3.03170,3.99821");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[28]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_43) {
+          values("11.36423,11.40327,11.49906,11.62531,11.79471,12.01836,12.31620,12.69196,13.14104,13.67904");
+	}
+	rise_transition(template_43) {
+          values("0.19539,0.23284,0.31810,0.45666,0.70633,1.09662,1.60578,2.24711,3.03068,3.96749");
+	}
+	cell_fall(template_44) {
+          values("10.04815,10.08261,10.16945,10.29664,10.47417,10.71669,11.03272,11.42875,11.91025,12.48625");
+	}
+	fall_transition(template_44) {
+          values("0.15194,0.18777,0.27648,0.43178,0.69237,1.07718,1.58821,2.23615,3.03505,3.99649");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[27]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_41) {
+          values("9.31578,9.34826,9.42796,9.54035,9.69829,9.91995,10.21165,10.57925,11.03095,11.56985");
+	}
+	rise_transition(template_41) {
+          values("0.13999,0.17118,0.25052,0.39599,0.65685,1.04341,1.55961,2.21440,3.02020,3.98410");
+	}
+	cell_fall(template_42) {
+          values("8.64620,8.67547,8.75234,8.87148,9.04198,9.27892,9.59115,9.98647,10.47047,11.04747");
+	}
+	fall_transition(template_42) {
+          values("0.11357,0.14411,0.22858,0.38804,0.64893,1.03804,1.56068,2.22332,3.03409,4.00409");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[26]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_39) {
+          values("9.60564,9.63917,9.72119,9.83560,9.99452,10.21681,10.50914,10.87663,11.32846,11.86646");
+	}
+	rise_transition(template_39) {
+          values("0.14746,0.17996,0.26026,0.40433,0.66337,1.04980,1.56447,2.21681,3.01966,3.98401");
+	}
+	cell_fall(template_40) {
+          values("8.85047,8.88067,8.95895,9.07934,9.25080,9.48782,9.80042,10.19462,10.67862,11.25562");
+	}
+	fall_transition(template_40) {
+          values("0.11978,0.15054,0.23546,0.39470,0.65506,1.04141,1.56180,2.22220,3.03260,4.00260");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[25]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_37) {
+          values("11.66084,11.70086,11.79911,11.92747,12.09872,12.32262,12.62144,12.99867,13.44726,13.98526");
+	}
+	rise_transition(template_37) {
+          values("0.20392,0.24225,0.32839,0.46597,0.71398,1.10495,1.61313,2.25250,3.03264,3.96455");
+	}
+	cell_fall(template_38) {
+          values("10.23893,10.27387,10.36223,10.49050,10.66904,10.91240,11.22955,11.62670,12.10791,12.68392");
+	}
+	fall_transition(template_38) {
+          values("0.15675,0.19359,0.28281,0.43782,0.69819,1.08333,1.59549,2.24118,3.03673,3.99621");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[24]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_35) {
+          values("10.78894,10.82638,10.91819,11.04102,11.20739,11.43065,11.72690,12.10026,12.55014,13.08814");
+	}
+	rise_transition(template_35) {
+          values("0.18154,0.21756,0.30138,0.44153,0.69392,1.08309,1.59384,2.23835,3.02749,3.97226");
+	}
+	cell_fall(template_36) {
+          values("9.63882,9.67248,9.75678,9.88212,10.05795,10.29906,10.61321,11.00736,11.48932,12.06532");
+	}
+	fall_transition(template_36) {
+          values("0.14383,0.17797,0.26583,0.42159,0.68257,1.06681,1.57596,2.22766,3.03222,3.99696");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[23]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_33) {
+          values("9.77561,9.80947,9.89232,10.00744,10.16700,10.38936,10.68202,11.05001,11.50168,12.03969");
+	}
+	rise_transition(template_33) {
+          values("0.15035,0.18314,0.26374,0.40748,0.66595,1.05262,1.56696,2.21863,3.02032,3.98302");
+	}
+	cell_fall(template_34) {
+          values("8.98521,9.01583,9.09474,9.21567,9.38756,9.62461,9.93738,10.33108,10.81508,11.39208");
+	}
+	fall_transition(template_34) {
+          values("0.12252,0.15338,0.23850,0.39764,0.65777,1.04290,1.56230,2.22170,3.03193,4.00193");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[22]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_31) {
+          values("9.52744,9.56148,9.64477,9.76026,9.92015,10.14256,10.43540,10.80365,11.25523,11.79323");
+	}
+	rise_transition(template_31) {
+          values("0.15188,0.18483,0.26558,0.40915,0.66732,1.05411,1.56827,2.21960,3.02067,3.98249");
+	}
+	cell_fall(template_32) {
+          values("8.72797,8.75862,8.83757,8.95854,9.13046,9.36752,9.68029,10.07396,10.55796,11.13496");
+	}
+	fall_transition(template_32) {
+          values("0.12271,0.15358,0.23871,0.39784,0.65795,1.04300,1.56233,2.22167,3.03189,4.00189");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[21]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_29) {
+          values("8.79826,8.82904,8.90520,9.01448,9.17158,9.39197,9.68298,10.05198,10.50299,11.04399");
+	}
+	rise_transition(template_29) {
+          values("0.12909,0.15788,0.23567,0.38370,0.64753,1.03496,1.55400,2.21299,3.02299,3.98198");
+	}
+	cell_fall(template_30) {
+          values("8.25115,8.27907,8.35343,8.47062,8.64014,8.87751,9.18994,9.58594,10.07038,10.64738");
+	}
+	fall_transition(template_30) {
+          values("0.10320,0.13269,0.21732,0.37701,0.64175,1.03471,1.55957,2.22443,3.03457,4.00371");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[20]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_27) {
+          values("10.20213,10.23787,10.32540,10.44454,10.60766,10.83049,11.12502,11.49582,11.94655,12.48456");
+	}
+	rise_transition(template_27) {
+          values("0.16663,0.20111,0.28339,0.42526,0.68055,1.06853,1.58099,2.22893,3.02407,3.97740");
+	}
+	cell_fall(template_28) {
+          values("9.23019,9.26240,9.34402,9.46719,9.64105,9.87979,10.19322,10.58664,11.06979,11.64637");
+	}
+	fall_transition(template_28) {
+          values("0.13350,0.16576,0.25218,0.40983,0.67013,1.05387,1.56807,2.22353,3.03142,3.99931");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[19]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_23) {
+          values("9.74598,9.78071,9.86573,9.98272,10.14393,10.36652,10.66004,11.02934,11.48058,12.01858");
+	}
+	rise_transition(template_23) {
+          values("0.15792,0.19149,0.27287,0.41574,0.67274,1.06001,1.57348,2.22342,3.02206,3.98041");
+	}
+	cell_fall(template_24) {
+          values("8.87995,8.91129,8.99135,9.11326,9.28595,9.52328,9.83633,10.22939,10.71328,11.29022");
+	}
+	fall_transition(template_24) {
+          values("0.12739,0.15857,0.24411,0.40292,0.66279,1.04624,1.56371,2.22135,3.03106,4.00076");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[18]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_21) {
+          values("8.45806,8.48755,8.56057,8.66827,8.82475,9.04486,9.33649,9.70549,10.15763,10.69806");
+	}
+	rise_transition(template_21) {
+          values("0.12044,0.14821,0.22556,0.37595,0.64214,1.03215,1.55400,2.21243,3.02243,3.98029");
+	}
+	cell_fall(template_22) {
+          values("7.99176,8.01894,8.09172,8.20776,8.37689,8.61472,8.92757,9.32357,9.80842,10.38542");
+	}
+	fall_transition(template_22) {
+          values("0.09685,0.12548,0.21052,0.37029,0.63843,1.03346,1.55915,2.22485,3.03415,4.00246");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[17]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_19) {
+          values("11.88423,11.92511,12.02548,12.15567,12.32855,12.55267,12.85234,13.23084,13.67901,14.21701");
+	}
+	rise_transition(template_19) {
+          values("0.21134,0.25044,0.33735,0.47407,0.72063,1.11220,1.61953,2.25719,3.03434,3.96199");
+	}
+	cell_fall(template_20) {
+          values("10.36920,10.40462,10.49448,10.62383,10.80337,11.04757,11.36584,11.76411,12.24504,12.82104");
+	}
+	fall_transition(template_20) {
+          values("0.16155,0.19939,0.28911,0.44384,0.70399,1.08947,1.60273,2.24620,3.03840,3.99593");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[16]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_17) {
+          values("11.23388,11.27281,11.36833,11.49435,11.66354,11.88717,12.18490,12.56050,13.00963,13.54763");
+	}
+	rise_transition(template_17) {
+          values("0.19445,0.23181,0.31696,0.45563,0.70549,1.09570,1.60497,2.24651,3.03046,3.96781");
+	}
+	cell_fall(template_18) {
+          values("9.92753,9.96194,10.04862,10.17569,10.35311,10.59555,10.91146,11.30738,11.78890,12.36490");
+	}
+	fall_transition(template_18) {
+          values("0.15143,0.18715,0.27581,0.43114,0.69175,1.07653,1.58744,2.23561,3.03487,3.99652");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[15]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_15) {
+          values("9.01672,9.04814,9.12561,9.23603,9.39344,9.61430,9.90556,10.27404,10.72530,11.26553");
+	}
+	rise_transition(template_15) {
+          values("0.13313,0.16280,0.24116,0.38824,0.65097,1.03806,1.55604,2.21351,3.02198,3.98277");
+	}
+	cell_fall(template_16) {
+          values("8.42685,8.45520,8.53047,8.64833,8.81806,9.05517,9.36736,9.76336,10.24755,10.82455");
+	}
+	fall_transition(template_16) {
+          values("0.10685,0.13684,0.22124,0.38087,0.64366,1.03542,1.55981,2.22419,3.03481,4.00442");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[14]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_13) {
+          values("11.27797,11.31689,11.41239,11.53838,11.70755,11.93118,12.22890,12.60448,13.05362,13.59162");
+	}
+	rise_transition(template_13) {
+          values("0.19436,0.23170,0.31685,0.45553,0.70541,1.09561,1.60489,2.24646,3.03044,3.96784");
+	}
+	cell_fall(template_14) {
+          values("9.97332,10.00773,10.09441,10.22146,10.39888,10.64131,10.95721,11.35312,11.83464,12.41064");
+	}
+	fall_transition(template_14) {
+          values("0.15139,0.18711,0.27577,0.43109,0.69171,1.07648,1.58739,2.23557,3.03486,3.99652");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[13]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_11) {
+          values("9.54131,9.57456,9.65587,9.76967,9.92806,10.15027,10.44232,10.80939,11.26136,11.79936");
+	}
+	rise_transition(template_11) {
+          values("0.14500,0.17724,0.25728,0.40164,0.66116,1.04739,1.56235,2.21525,3.01909,3.98486");
+	}
+	cell_fall(template_12) {
+          values("8.81559,8.84549,8.92331,9.04329,9.21443,9.45143,9.76391,10.15847,10.64247,11.21947");
+	}
+	fall_transition(template_12) {
+          values("0.11775,0.14843,0.23321,0.39252,0.65305,1.04031,1.56144,2.22256,3.03309,4.00309");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[12]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_9) {
+          values("8.47310,8.50228,8.57452,8.68185,8.83817,9.05822,9.35000,9.71900,10.17141,10.71170");
+	}
+	rise_transition(template_9) {
+          values("0.11833,0.14586,0.22309,0.37406,0.64082,1.03147,1.55400,2.21229,3.02229,3.97988");
+	}
+	cell_fall(template_10) {
+          values("8.02586,8.05285,8.12524,8.24099,8.41003,8.64798,8.96092,9.35692,9.84187,10.41887");
+	}
+	fall_transition(template_10) {
+          values("0.09528,0.12369,0.20884,0.36863,0.63761,1.03315,1.55905,2.22495,3.03405,4.00215");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[11]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_7) {
+          values("9.44070,9.47316,9.55283,9.66518,9.82312,10.04477,10.33646,10.70407,11.15577,11.69469");
+	}
+	rise_transition(template_7) {
+          values("0.13988,0.17104,0.25037,0.39587,0.65676,1.04332,1.55955,2.21439,3.02023,3.98408");
+	}
+	cell_fall(template_8) {
+          values("8.77187,8.80113,8.87797,8.99711,9.16759,9.40453,9.71675,10.11208,10.59608,11.17309");
+	}
+	fall_transition(template_8) {
+          values("0.11349,0.14403,0.22849,0.38796,0.64885,1.03800,1.56067,2.22333,3.03411,4.00411");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[10]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_5) {
+          values("9.25513,9.28741,9.36671,9.47873,9.63658,9.85809,10.14971,10.51747,10.96909,11.50823");
+	}
+	rise_transition(template_5) {
+          values("0.13874,0.16965,0.24881,0.39458,0.65578,1.04243,1.55896,2.21424,3.02052,3.98386");
+	}
+	cell_fall(template_6) {
+          values("8.60768,8.63668,8.71315,8.83195,9.00217,9.23909,9.55121,9.94685,10.43085,11.00785");
+	}
+	fall_transition(template_6) {
+          values("0.11183,0.14230,0.22665,0.38617,0.64720,1.03710,1.56037,2.22363,3.03451,4.00451");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[9]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_65) {
+          values("9.87228,9.90704,9.99214,10.10920,10.27046,10.49305,10.78662,11.15596,11.60718,12.14518");
+	}
+	rise_transition(template_65) {
+          values("0.15818,0.19179,0.27319,0.41603,0.67298,1.06027,1.57371,2.22359,3.02212,3.98032");
+	}
+	cell_fall(template_66) {
+          values("9.00277,9.03414,9.11425,9.23620,9.40893,9.64631,9.95939,10.35246,10.83631,11.41324");
+	}
+	fall_transition(template_66) {
+          values("0.12761,0.15882,0.24440,0.40317,0.66305,1.04651,1.56386,2.22143,3.03107,4.00071");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[8]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_63) {
+          values("9.33129,9.36428,9.44504,9.55835,9.71655,9.93859,10.23050,10.59768,11.04959,11.58785");
+	}
+	rise_transition(template_63) {
+          values("0.14325,0.17516,0.25496,0.39968,0.65965,1.04595,1.56130,2.21483,3.01935,3.98474");
+	}
+	cell_fall(template_64) {
+          values("8.63426,8.66381,8.74109,8.86060,9.03137,9.26834,9.58068,9.97567,10.45967,11.03666");
+	}
+	fall_transition(template_64) {
+          values("0.11539,0.14599,0.23060,0.38999,0.65072,1.03903,1.56101,2.22299,3.03365,4.00365");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[7]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_61) {
+          values("11.10890,11.14747,11.24208,11.36732,11.53581,11.75935,12.05672,12.43177,12.88109,13.41909");
+	}
+	rise_transition(template_61) {
+          values("0.19128,0.22831,0.31314,0.45217,0.70265,1.09261,1.60224,2.24451,3.02973,3.96890");
+	}
+	cell_fall(template_62) {
+          values("9.83958,9.87380,9.95990,10.08654,10.26356,10.50567,10.82115,11.21662,11.69825,12.27425");
+	}
+	fall_transition(template_62) {
+          values("0.14955,0.18487,0.27334,0.42877,0.68947,1.07412,1.58459,2.23364,3.03421,3.99663");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[6]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_59) {
+          values("10.17779,10.21354,10.30110,10.42028,10.58342,10.80625,11.10080,11.47162,11.92234,12.46034");
+	}
+	rise_transition(template_59) {
+          values("0.16675,0.20124,0.28354,0.42539,0.68066,1.06864,1.58110,2.22900,3.02409,3.97736");
+	}
+	cell_fall(template_60) {
+          values("9.20503,9.23727,9.31893,9.44214,9.61603,9.85481,10.16824,10.56168,11.04481,11.62138");
+	}
+	fall_transition(template_60) {
+          values("0.13366,0.16596,0.25240,0.41002,0.67033,1.05408,1.56819,2.22359,3.03143,3.99927");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[5]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_57) {
+          values("8.90987,8.94093,9.01767,9.12745,9.28468,9.50528,9.79639,10.16517,10.61628,11.15695");
+	}
+	rise_transition(template_57) {
+          values("0.13088,0.16005,0.23809,0.38570,0.64904,1.03631,1.55487,2.21322,3.02256,3.98233");
+	}
+	cell_fall(template_58) {
+          values("8.34359,8.37170,8.44646,8.56394,8.73355,8.97081,9.28314,9.67914,10.16346,10.74046");
+	}
+	fall_transition(template_58) {
+          values("0.10480,0.13451,0.21904,0.37870,0.64258,1.03502,1.55967,2.22433,3.03467,4.00402");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[4]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_55) {
+          values("10.73719,10.77490,10.86739,10.99079,11.15767,11.38100,11.67751,12.05128,12.50103,13.03903");
+	}
+	rise_transition(template_55) {
+          values("0.18387,0.22014,0.30420,0.44408,0.69601,1.08537,1.59586,2.23983,3.02803,3.97146");
+	}
+	cell_fall(template_56) {
+          values("9.57007,9.60385,9.68850,9.81410,9.99017,10.23147,10.54588,10.94029,11.42219,11.99819");
+	}
+	fall_transition(template_56) {
+          values("0.14496,0.17933,0.26731,0.42301,0.68393,1.06825,1.57766,2.22884,3.03261,3.99690");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[3]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_53) {
+          values("8.39424,8.42328,8.49519,8.60235,8.75860,8.97862,9.27046,9.63946,10.09200,10.63223");
+	}
+	rise_transition(template_53) {
+          values("0.11740,0.14482,0.22201,0.37323,0.64024,1.03117,1.55400,2.21223,3.02223,3.97970");
+	}
+	cell_fall(template_54) {
+          values("7.95484,7.98174,8.05394,8.16953,8.33853,8.57654,8.88954,9.28554,9.77054,10.34754");
+	}
+	fall_transition(template_54) {
+          values("0.09448,0.12278,0.20798,0.36779,0.63720,1.03300,1.55900,2.22500,3.03400,4.00201");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[2]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_47) {
+          values("9.54228,9.57534,9.65626,9.76971,9.92795,10.15004,10.44199,10.80910,11.26104,11.79921");
+	}
+	rise_transition(template_47) {
+          values("0.14373,0.17574,0.25562,0.40022,0.66006,1.04632,1.56155,2.21489,3.01923,3.98483");
+	}
+	cell_fall(template_48) {
+          values("8.83347,8.86314,8.94060,9.06028,9.23118,9.46816,9.78054,10.17538,10.65938,11.23638");
+	}
+	fall_transition(template_48) {
+          values("0.11621,0.14684,0.23150,0.39087,0.65153,1.03947,1.56116,2.22284,3.03346,4.00346");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[1]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_25) {
+          values("8.76535,8.79620,8.87250,8.98189,9.13902,9.35946,9.65048,10.01944,10.47046,11.01139");
+	}
+	rise_transition(template_25) {
+          values("0.12952,0.15839,0.23624,0.38416,0.64788,1.03525,1.55417,2.21304,3.02292,3.98206");
+	}
+	cell_fall(template_26) {
+          values("8.21379,8.24176,8.31621,8.43348,8.60301,8.84036,9.15276,9.54876,10.03317,10.61017");
+	}
+	fall_transition(template_26) {
+          values("0.10359,0.13314,0.21774,0.37742,0.64195,1.03478,1.55959,2.22441,3.03459,4.00378");
+	}
+      }
+    }
+    pin("rambus_wb_dat_o[0]") {
+      direction : output;
+      capacitance : 0.0729;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : rising_edge;
+	cell_rise(template_3) {
+          values("9.80133,9.83536,9.91864,10.03413,10.19401,10.41641,10.70925,11.07749,11.52908,12.06708");
+	}
+	rise_transition(template_3) {
+          values("0.15183,0.18478,0.26553,0.40910,0.66728,1.05406,1.56823,2.21957,3.02066,3.98251");
+	}
+	cell_fall(template_4) {
+          values("9.00870,9.03931,9.11820,9.23911,9.41099,9.64804,9.96080,10.35452,10.83852,11.41552");
+	}
+	fall_transition(template_4) {
+          values("0.12244,0.15329,0.23841,0.39755,0.65768,1.04285,1.56228,2.22172,3.03196,4.00196");
+	}
+      }
+    }
+    }
+    bus("rambus_wb_sel_i") {
+      bus_type : rambus_wb_sel_i;
+      direction : input;
+      capacitance : 0.0000;
+    pin("rambus_wb_sel_i[3]") {
+      direction : input;
+      capacitance : 0.0047;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.33953");
+	}
+	fall_constraint(scalar) {
+          values("0.90565");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("13.44487");
+	}
+	fall_constraint(scalar) {
+          values("12.27460");
+	}
+      }
+    }
+    pin("rambus_wb_sel_i[2]") {
+      direction : input;
+      capacitance : 0.0079;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("0.76440");
+	}
+	fall_constraint(scalar) {
+          values("0.39978");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("12.40315");
+	}
+	fall_constraint(scalar) {
+          values("12.61352");
+	}
+      }
+    }
+    pin("rambus_wb_sel_i[1]") {
+      direction : input;
+      capacitance : 0.0064;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("-0.22800");
+	}
+	fall_constraint(scalar) {
+          values("0.11091");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("14.04073");
+	}
+	fall_constraint(scalar) {
+          values("13.65009");
+	}
+      }
+    }
+    pin("rambus_wb_sel_i[0]") {
+      direction : input;
+      capacitance : 0.0064;
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : hold_rising;
+	rise_constraint(scalar) {
+          values("1.78959");
+	}
+	fall_constraint(scalar) {
+          values("1.99881");
+	}
+      }
+      timing() {
+        related_pin : "rambus_wb_clk_i";
+        timing_type : setup_rising;
+	rise_constraint(scalar) {
+          values("11.58011");
+	}
+	fall_constraint(scalar) {
+          values("11.10190");
+	}
+      }
+    }
+    }
+  }
+
+}

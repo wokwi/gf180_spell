@@ -1,0 +1,1011 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO rambus
+  CLASS BLOCK ;
+  FOREIGN rambus ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 2800.000 BY 1800.000 ;
+  PIN rambus_wb_ack_o
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1747.200 1796.000 1747.760 1799.000 ;
+    END
+  END rambus_wb_ack_o
+  PIN rambus_wb_addr_i[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 84.000 1796.000 84.560 1799.000 ;
+    END
+  END rambus_wb_addr_i[0]
+  PIN rambus_wb_addr_i[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 1078.560 2799.000 1079.120 ;
+    END
+  END rambus_wb_addr_i[1]
+  PIN rambus_wb_addr_i[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 971.040 1796.000 971.600 1799.000 ;
+    END
+  END rambus_wb_addr_i[2]
+  PIN rambus_wb_addr_i[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 221.760 1.000 222.320 4.000 ;
+    END
+  END rambus_wb_addr_i[3]
+  PIN rambus_wb_addr_i[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 1774.080 4.000 1774.640 ;
+    END
+  END rambus_wb_addr_i[4]
+  PIN rambus_wb_addr_i[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 413.280 2799.000 413.840 ;
+    END
+  END rambus_wb_addr_i[5]
+  PIN rambus_wb_addr_i[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1995.840 1.000 1996.400 4.000 ;
+    END
+  END rambus_wb_addr_i[6]
+  PIN rambus_wb_addr_i[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 110.880 4.000 111.440 ;
+    END
+  END rambus_wb_addr_i[7]
+  PIN rambus_wb_addr_i[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1884.960 1.000 1885.520 4.000 ;
+    END
+  END rambus_wb_addr_i[8]
+  PIN rambus_wb_clk_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 332.640 4.000 333.200 ;
+    END
+  END rambus_wb_clk_i
+  PIN rambus_wb_cyc_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 1441.440 4.000 1442.000 ;
+    END
+  END rambus_wb_cyc_i
+  PIN rambus_wb_dat_i[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 554.400 4.000 554.960 ;
+    END
+  END rambus_wb_dat_i[0]
+  PIN rambus_wb_dat_i[10]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 1330.560 4.000 1331.120 ;
+    END
+  END rambus_wb_dat_i[10]
+  PIN rambus_wb_dat_i[11]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2328.480 1.000 2329.040 4.000 ;
+    END
+  END rambus_wb_dat_i[11]
+  PIN rambus_wb_dat_i[12]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2745.120 1796.000 2745.680 1799.000 ;
+    END
+  END rambus_wb_dat_i[12]
+  PIN rambus_wb_dat_i[13]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 416.640 1796.000 417.200 1799.000 ;
+    END
+  END rambus_wb_dat_i[13]
+  PIN rambus_wb_dat_i[14]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2190.720 1796.000 2191.280 1799.000 ;
+    END
+  END rambus_wb_dat_i[14]
+  PIN rambus_wb_dat_i[15]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2661.120 1.000 2661.680 4.000 ;
+    END
+  END rambus_wb_dat_i[15]
+  PIN rambus_wb_dat_i[16]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1636.320 1796.000 1636.880 1799.000 ;
+    END
+  END rambus_wb_dat_i[16]
+  PIN rambus_wb_dat_i[17]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 856.800 2799.000 857.360 ;
+    END
+  END rambus_wb_dat_i[17]
+  PIN rambus_wb_dat_i[18]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 302.400 2799.000 302.960 ;
+    END
+  END rambus_wb_dat_i[18]
+  PIN rambus_wb_dat_i[19]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 1189.440 2799.000 1190.000 ;
+    END
+  END rambus_wb_dat_i[19]
+  PIN rambus_wb_dat_i[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 305.760 1796.000 306.320 1799.000 ;
+    END
+  END rambus_wb_dat_i[1]
+  PIN rambus_wb_dat_i[20]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 1522.080 2799.000 1522.640 ;
+    END
+  END rambus_wb_dat_i[20]
+  PIN rambus_wb_dat_i[21]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1192.800 1796.000 1193.360 1799.000 ;
+    END
+  END rambus_wb_dat_i[21]
+  PIN rambus_wb_dat_i[22]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 967.680 2799.000 968.240 ;
+    END
+  END rambus_wb_dat_i[22]
+  PIN rambus_wb_dat_i[23]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 191.520 2799.000 192.080 ;
+    END
+  END rambus_wb_dat_i[23]
+  PIN rambus_wb_dat_i[24]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 443.520 4.000 444.080 ;
+    END
+  END rambus_wb_dat_i[24]
+  PIN rambus_wb_dat_i[25]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 1411.200 2799.000 1411.760 ;
+    END
+  END rambus_wb_dat_i[25]
+  PIN rambus_wb_dat_i[26]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 665.280 1.000 665.840 4.000 ;
+    END
+  END rambus_wb_dat_i[26]
+  PIN rambus_wb_dat_i[27]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2106.720 1.000 2107.280 4.000 ;
+    END
+  END rambus_wb_dat_i[27]
+  PIN rambus_wb_dat_i[28]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2079.840 1796.000 2080.400 1799.000 ;
+    END
+  END rambus_wb_dat_i[28]
+  PIN rambus_wb_dat_i[29]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 638.400 1796.000 638.960 1799.000 ;
+    END
+  END rambus_wb_dat_i[29]
+  PIN rambus_wb_dat_i[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1858.080 1796.000 1858.640 1799.000 ;
+    END
+  END rambus_wb_dat_i[2]
+  PIN rambus_wb_dat_i[30]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 887.040 1.000 887.600 4.000 ;
+    END
+  END rambus_wb_dat_i[30]
+  PIN rambus_wb_dat_i[31]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2523.360 1796.000 2523.920 1799.000 ;
+    END
+  END rambus_wb_dat_i[31]
+  PIN rambus_wb_dat_i[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 1300.320 2799.000 1300.880 ;
+    END
+  END rambus_wb_dat_i[3]
+  PIN rambus_wb_dat_i[4]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 1219.680 4.000 1220.240 ;
+    END
+  END rambus_wb_dat_i[4]
+  PIN rambus_wb_dat_i[5]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 887.040 4.000 887.600 ;
+    END
+  END rambus_wb_dat_i[5]
+  PIN rambus_wb_dat_i[6]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 554.400 1.000 554.960 4.000 ;
+    END
+  END rambus_wb_dat_i[6]
+  PIN rambus_wb_dat_i[7]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1774.080 1.000 1774.640 4.000 ;
+    END
+  END rambus_wb_dat_i[7]
+  PIN rambus_wb_dat_i[8]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 80.640 2799.000 81.200 ;
+    END
+  END rambus_wb_dat_i[8]
+  PIN rambus_wb_dat_i[9]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2550.240 1.000 2550.800 4.000 ;
+    END
+  END rambus_wb_dat_i[9]
+  PIN rambus_wb_dat_o[0]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1441.440 1.000 1442.000 4.000 ;
+    END
+  END rambus_wb_dat_o[0]
+  PIN rambus_wb_dat_o[10]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 527.520 1796.000 528.080 1799.000 ;
+    END
+  END rambus_wb_dat_o[10]
+  PIN rambus_wb_dat_o[11]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2217.600 1.000 2218.160 4.000 ;
+    END
+  END rambus_wb_dat_o[11]
+  PIN rambus_wb_dat_o[12]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1303.680 1796.000 1304.240 1799.000 ;
+    END
+  END rambus_wb_dat_o[12]
+  PIN rambus_wb_dat_o[13]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2772.000 1.000 2772.560 4.000 ;
+    END
+  END rambus_wb_dat_o[13]
+  PIN rambus_wb_dat_o[14]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 524.160 2799.000 524.720 ;
+    END
+  END rambus_wb_dat_o[14]
+  PIN rambus_wb_dat_o[15]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1663.200 1.000 1663.760 4.000 ;
+    END
+  END rambus_wb_dat_o[15]
+  PIN rambus_wb_dat_o[16]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 1552.320 4.000 1552.880 ;
+    END
+  END rambus_wb_dat_o[16]
+  PIN rambus_wb_dat_o[17]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 221.760 4.000 222.320 ;
+    END
+  END rambus_wb_dat_o[17]
+  PIN rambus_wb_dat_o[18]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1525.440 1796.000 1526.000 1799.000 ;
+    END
+  END rambus_wb_dat_o[18]
+  PIN rambus_wb_dat_o[19]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1108.800 1.000 1109.360 4.000 ;
+    END
+  END rambus_wb_dat_o[19]
+  PIN rambus_wb_dat_o[1]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 0.000 1.000 0.560 4.000 ;
+    END
+  END rambus_wb_dat_o[1]
+  PIN rambus_wb_dat_o[20]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1330.560 1.000 1331.120 4.000 ;
+    END
+  END rambus_wb_dat_o[20]
+  PIN rambus_wb_dat_o[21]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1414.560 1796.000 1415.120 1799.000 ;
+    END
+  END rambus_wb_dat_o[21]
+  PIN rambus_wb_dat_o[22]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1968.960 1796.000 1969.520 1799.000 ;
+    END
+  END rambus_wb_dat_o[22]
+  PIN rambus_wb_dat_o[23]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2634.240 1796.000 2634.800 1799.000 ;
+    END
+  END rambus_wb_dat_o[23]
+  PIN rambus_wb_dat_o[24]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 1663.200 4.000 1663.760 ;
+    END
+  END rambus_wb_dat_o[24]
+  PIN rambus_wb_dat_o[25]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 332.640 1.000 333.200 4.000 ;
+    END
+  END rambus_wb_dat_o[25]
+  PIN rambus_wb_dat_o[26]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 110.880 1.000 111.440 4.000 ;
+    END
+  END rambus_wb_dat_o[26]
+  PIN rambus_wb_dat_o[27]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 1743.840 2799.000 1744.400 ;
+    END
+  END rambus_wb_dat_o[27]
+  PIN rambus_wb_dat_o[28]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 776.160 4.000 776.720 ;
+    END
+  END rambus_wb_dat_o[28]
+  PIN rambus_wb_dat_o[29]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 997.920 1.000 998.480 4.000 ;
+    END
+  END rambus_wb_dat_o[29]
+  PIN rambus_wb_dat_o[2]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 1632.960 2799.000 1633.520 ;
+    END
+  END rambus_wb_dat_o[2]
+  PIN rambus_wb_dat_o[30]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2439.360 1.000 2439.920 4.000 ;
+    END
+  END rambus_wb_dat_o[30]
+  PIN rambus_wb_dat_o[31]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 860.160 1796.000 860.720 1799.000 ;
+    END
+  END rambus_wb_dat_o[31]
+  PIN rambus_wb_dat_o[3]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 1108.800 4.000 1109.360 ;
+    END
+  END rambus_wb_dat_o[3]
+  PIN rambus_wb_dat_o[4]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 443.520 1.000 444.080 4.000 ;
+    END
+  END rambus_wb_dat_o[4]
+  PIN rambus_wb_dat_o[5]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 776.160 1.000 776.720 4.000 ;
+    END
+  END rambus_wb_dat_o[5]
+  PIN rambus_wb_dat_o[6]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 997.920 4.000 998.480 ;
+    END
+  END rambus_wb_dat_o[6]
+  PIN rambus_wb_dat_o[7]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 745.920 2799.000 746.480 ;
+    END
+  END rambus_wb_dat_o[7]
+  PIN rambus_wb_dat_o[8]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1219.680 1.000 1220.240 4.000 ;
+    END
+  END rambus_wb_dat_o[8]
+  PIN rambus_wb_dat_o[9]
+    DIRECTION OUTPUT TRISTATE ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2412.480 1796.000 2413.040 1799.000 ;
+    END
+  END rambus_wb_dat_o[9]
+  PIN rambus_wb_rst_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 2301.600 1796.000 2302.160 1799.000 ;
+    END
+  END rambus_wb_rst_i
+  PIN rambus_wb_sel_i[0]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 749.280 1796.000 749.840 1799.000 ;
+    END
+  END rambus_wb_sel_i[0]
+  PIN rambus_wb_sel_i[1]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1081.920 1796.000 1082.480 1799.000 ;
+    END
+  END rambus_wb_sel_i[1]
+  PIN rambus_wb_sel_i[2]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 1552.320 1.000 1552.880 4.000 ;
+    END
+  END rambus_wb_sel_i[2]
+  PIN rambus_wb_sel_i[3]
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 1.000 665.280 4.000 665.840 ;
+    END
+  END rambus_wb_sel_i[3]
+  PIN rambus_wb_stb_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal2 ;
+        RECT 194.880 1796.000 195.440 1799.000 ;
+    END
+  END rambus_wb_stb_i
+  PIN rambus_wb_we_i
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER Metal3 ;
+        RECT 2796.000 635.040 2799.000 635.600 ;
+    END
+  END rambus_wb_we_i
+  PIN vdd
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal4 ;
+        RECT 22.240 15.380 23.840 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 175.840 15.380 177.440 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 329.440 15.380 331.040 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 483.040 15.380 484.640 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 636.640 15.380 638.240 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 790.240 15.380 791.840 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 943.840 15.380 945.440 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1097.440 15.380 1099.040 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1251.040 15.380 1252.640 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1404.640 15.380 1406.240 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1558.240 15.380 1559.840 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1711.840 15.380 1713.440 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1865.440 15.380 1867.040 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2019.040 15.380 2020.640 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2172.640 15.380 2174.240 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2326.240 15.380 2327.840 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2479.840 15.380 2481.440 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2633.440 15.380 2635.040 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2787.040 15.380 2788.640 1783.900 ;
+    END
+  END vdd
+  PIN vss
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal4 ;
+        RECT 99.040 15.380 100.640 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 252.640 15.380 254.240 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 406.240 15.380 407.840 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 559.840 15.380 561.440 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 713.440 15.380 715.040 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 867.040 15.380 868.640 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1020.640 15.380 1022.240 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1174.240 15.380 1175.840 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1327.840 15.380 1329.440 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1481.440 15.380 1483.040 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1635.040 15.380 1636.640 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1788.640 15.380 1790.240 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 1942.240 15.380 1943.840 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2095.840 15.380 2097.440 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2249.440 15.380 2251.040 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2403.040 15.380 2404.640 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2556.640 15.380 2558.240 1783.900 ;
+    END
+    PORT
+      LAYER Metal4 ;
+        RECT 2710.240 15.380 2711.840 1783.900 ;
+    END
+  END vss
+  OBS
+      LAYER Metal1 ;
+        RECT 6.720 15.380 2793.280 1784.570 ;
+      LAYER Metal2 ;
+        RECT 0.140 1799.300 2790.900 1799.700 ;
+        RECT 0.140 1795.700 83.700 1799.300 ;
+        RECT 84.860 1795.700 194.580 1799.300 ;
+        RECT 195.740 1795.700 305.460 1799.300 ;
+        RECT 306.620 1795.700 416.340 1799.300 ;
+        RECT 417.500 1795.700 527.220 1799.300 ;
+        RECT 528.380 1795.700 638.100 1799.300 ;
+        RECT 639.260 1795.700 748.980 1799.300 ;
+        RECT 750.140 1795.700 859.860 1799.300 ;
+        RECT 861.020 1795.700 970.740 1799.300 ;
+        RECT 971.900 1795.700 1081.620 1799.300 ;
+        RECT 1082.780 1795.700 1192.500 1799.300 ;
+        RECT 1193.660 1795.700 1303.380 1799.300 ;
+        RECT 1304.540 1795.700 1414.260 1799.300 ;
+        RECT 1415.420 1795.700 1525.140 1799.300 ;
+        RECT 1526.300 1795.700 1636.020 1799.300 ;
+        RECT 1637.180 1795.700 1746.900 1799.300 ;
+        RECT 1748.060 1795.700 1857.780 1799.300 ;
+        RECT 1858.940 1795.700 1968.660 1799.300 ;
+        RECT 1969.820 1795.700 2079.540 1799.300 ;
+        RECT 2080.700 1795.700 2190.420 1799.300 ;
+        RECT 2191.580 1795.700 2301.300 1799.300 ;
+        RECT 2302.460 1795.700 2412.180 1799.300 ;
+        RECT 2413.340 1795.700 2523.060 1799.300 ;
+        RECT 2524.220 1795.700 2633.940 1799.300 ;
+        RECT 2635.100 1795.700 2744.820 1799.300 ;
+        RECT 2745.980 1795.700 2790.900 1799.300 ;
+        RECT 0.140 4.300 2790.900 1795.700 ;
+        RECT 0.860 2.890 110.580 4.300 ;
+        RECT 111.740 2.890 221.460 4.300 ;
+        RECT 222.620 2.890 332.340 4.300 ;
+        RECT 333.500 2.890 443.220 4.300 ;
+        RECT 444.380 2.890 554.100 4.300 ;
+        RECT 555.260 2.890 664.980 4.300 ;
+        RECT 666.140 2.890 775.860 4.300 ;
+        RECT 777.020 2.890 886.740 4.300 ;
+        RECT 887.900 2.890 997.620 4.300 ;
+        RECT 998.780 2.890 1108.500 4.300 ;
+        RECT 1109.660 2.890 1219.380 4.300 ;
+        RECT 1220.540 2.890 1330.260 4.300 ;
+        RECT 1331.420 2.890 1441.140 4.300 ;
+        RECT 1442.300 2.890 1552.020 4.300 ;
+        RECT 1553.180 2.890 1662.900 4.300 ;
+        RECT 1664.060 2.890 1773.780 4.300 ;
+        RECT 1774.940 2.890 1884.660 4.300 ;
+        RECT 1885.820 2.890 1995.540 4.300 ;
+        RECT 1996.700 2.890 2106.420 4.300 ;
+        RECT 2107.580 2.890 2217.300 4.300 ;
+        RECT 2218.460 2.890 2328.180 4.300 ;
+        RECT 2329.340 2.890 2439.060 4.300 ;
+        RECT 2440.220 2.890 2549.940 4.300 ;
+        RECT 2551.100 2.890 2660.820 4.300 ;
+        RECT 2661.980 2.890 2771.700 4.300 ;
+        RECT 2772.860 2.890 2790.900 4.300 ;
+      LAYER Metal3 ;
+        RECT 0.090 1774.940 2796.000 1796.900 ;
+        RECT 0.090 1773.780 0.700 1774.940 ;
+        RECT 4.300 1773.780 2796.000 1774.940 ;
+        RECT 0.090 1744.700 2796.000 1773.780 ;
+        RECT 0.090 1743.540 2795.700 1744.700 ;
+        RECT 0.090 1664.060 2796.000 1743.540 ;
+        RECT 0.090 1662.900 0.700 1664.060 ;
+        RECT 4.300 1662.900 2796.000 1664.060 ;
+        RECT 0.090 1633.820 2796.000 1662.900 ;
+        RECT 0.090 1632.660 2795.700 1633.820 ;
+        RECT 0.090 1553.180 2796.000 1632.660 ;
+        RECT 0.090 1552.020 0.700 1553.180 ;
+        RECT 4.300 1552.020 2796.000 1553.180 ;
+        RECT 0.090 1522.940 2796.000 1552.020 ;
+        RECT 0.090 1521.780 2795.700 1522.940 ;
+        RECT 0.090 1442.300 2796.000 1521.780 ;
+        RECT 0.090 1441.140 0.700 1442.300 ;
+        RECT 4.300 1441.140 2796.000 1442.300 ;
+        RECT 0.090 1412.060 2796.000 1441.140 ;
+        RECT 0.090 1410.900 2795.700 1412.060 ;
+        RECT 0.090 1331.420 2796.000 1410.900 ;
+        RECT 0.090 1330.260 0.700 1331.420 ;
+        RECT 4.300 1330.260 2796.000 1331.420 ;
+        RECT 0.090 1301.180 2796.000 1330.260 ;
+        RECT 0.090 1300.020 2795.700 1301.180 ;
+        RECT 0.090 1220.540 2796.000 1300.020 ;
+        RECT 0.090 1219.380 0.700 1220.540 ;
+        RECT 4.300 1219.380 2796.000 1220.540 ;
+        RECT 0.090 1190.300 2796.000 1219.380 ;
+        RECT 0.090 1189.140 2795.700 1190.300 ;
+        RECT 0.090 1109.660 2796.000 1189.140 ;
+        RECT 0.090 1108.500 0.700 1109.660 ;
+        RECT 4.300 1108.500 2796.000 1109.660 ;
+        RECT 0.090 1079.420 2796.000 1108.500 ;
+        RECT 0.090 1078.260 2795.700 1079.420 ;
+        RECT 0.090 998.780 2796.000 1078.260 ;
+        RECT 0.090 997.620 0.700 998.780 ;
+        RECT 4.300 997.620 2796.000 998.780 ;
+        RECT 0.090 968.540 2796.000 997.620 ;
+        RECT 0.090 967.380 2795.700 968.540 ;
+        RECT 0.090 887.900 2796.000 967.380 ;
+        RECT 0.090 886.740 0.700 887.900 ;
+        RECT 4.300 886.740 2796.000 887.900 ;
+        RECT 0.090 857.660 2796.000 886.740 ;
+        RECT 0.090 856.500 2795.700 857.660 ;
+        RECT 0.090 777.020 2796.000 856.500 ;
+        RECT 0.090 775.860 0.700 777.020 ;
+        RECT 4.300 775.860 2796.000 777.020 ;
+        RECT 0.090 746.780 2796.000 775.860 ;
+        RECT 0.090 745.620 2795.700 746.780 ;
+        RECT 0.090 666.140 2796.000 745.620 ;
+        RECT 0.090 664.980 0.700 666.140 ;
+        RECT 4.300 664.980 2796.000 666.140 ;
+        RECT 0.090 635.900 2796.000 664.980 ;
+        RECT 0.090 634.740 2795.700 635.900 ;
+        RECT 0.090 555.260 2796.000 634.740 ;
+        RECT 0.090 554.100 0.700 555.260 ;
+        RECT 4.300 554.100 2796.000 555.260 ;
+        RECT 0.090 525.020 2796.000 554.100 ;
+        RECT 0.090 523.860 2795.700 525.020 ;
+        RECT 0.090 444.380 2796.000 523.860 ;
+        RECT 0.090 443.220 0.700 444.380 ;
+        RECT 4.300 443.220 2796.000 444.380 ;
+        RECT 0.090 414.140 2796.000 443.220 ;
+        RECT 0.090 412.980 2795.700 414.140 ;
+        RECT 0.090 333.500 2796.000 412.980 ;
+        RECT 0.090 332.340 0.700 333.500 ;
+        RECT 4.300 332.340 2796.000 333.500 ;
+        RECT 0.090 303.260 2796.000 332.340 ;
+        RECT 0.090 302.100 2795.700 303.260 ;
+        RECT 0.090 222.620 2796.000 302.100 ;
+        RECT 0.090 221.460 0.700 222.620 ;
+        RECT 4.300 221.460 2796.000 222.620 ;
+        RECT 0.090 192.380 2796.000 221.460 ;
+        RECT 0.090 191.220 2795.700 192.380 ;
+        RECT 0.090 111.740 2796.000 191.220 ;
+        RECT 0.090 110.580 0.700 111.740 ;
+        RECT 4.300 110.580 2796.000 111.740 ;
+        RECT 0.090 81.500 2796.000 110.580 ;
+        RECT 0.090 80.340 2795.700 81.500 ;
+        RECT 0.090 2.940 2796.000 80.340 ;
+      LAYER Metal4 ;
+        RECT 58.940 1784.200 2688.420 1796.950 ;
+        RECT 58.940 15.080 98.740 1784.200 ;
+        RECT 100.940 15.080 175.540 1784.200 ;
+        RECT 177.740 15.080 252.340 1784.200 ;
+        RECT 254.540 15.080 329.140 1784.200 ;
+        RECT 331.340 15.080 405.940 1784.200 ;
+        RECT 408.140 15.080 482.740 1784.200 ;
+        RECT 484.940 15.080 559.540 1784.200 ;
+        RECT 561.740 15.080 636.340 1784.200 ;
+        RECT 638.540 15.080 713.140 1784.200 ;
+        RECT 715.340 15.080 789.940 1784.200 ;
+        RECT 792.140 15.080 866.740 1784.200 ;
+        RECT 868.940 15.080 943.540 1784.200 ;
+        RECT 945.740 15.080 1020.340 1784.200 ;
+        RECT 1022.540 15.080 1097.140 1784.200 ;
+        RECT 1099.340 15.080 1173.940 1784.200 ;
+        RECT 1176.140 15.080 1250.740 1784.200 ;
+        RECT 1252.940 15.080 1327.540 1784.200 ;
+        RECT 1329.740 15.080 1404.340 1784.200 ;
+        RECT 1406.540 15.080 1481.140 1784.200 ;
+        RECT 1483.340 15.080 1557.940 1784.200 ;
+        RECT 1560.140 15.080 1634.740 1784.200 ;
+        RECT 1636.940 15.080 1711.540 1784.200 ;
+        RECT 1713.740 15.080 1788.340 1784.200 ;
+        RECT 1790.540 15.080 1865.140 1784.200 ;
+        RECT 1867.340 15.080 1941.940 1784.200 ;
+        RECT 1944.140 15.080 2018.740 1784.200 ;
+        RECT 2020.940 15.080 2095.540 1784.200 ;
+        RECT 2097.740 15.080 2172.340 1784.200 ;
+        RECT 2174.540 15.080 2249.140 1784.200 ;
+        RECT 2251.340 15.080 2325.940 1784.200 ;
+        RECT 2328.140 15.080 2402.740 1784.200 ;
+        RECT 2404.940 15.080 2479.540 1784.200 ;
+        RECT 2481.740 15.080 2556.340 1784.200 ;
+        RECT 2558.540 15.080 2633.140 1784.200 ;
+        RECT 2635.340 15.080 2688.420 1784.200 ;
+        RECT 58.940 2.890 2688.420 15.080 ;
+  END
+END rambus
+END LIBRARY
+
