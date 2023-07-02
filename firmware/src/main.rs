@@ -31,9 +31,12 @@ fn main() -> ! {
     uart::init();
     wishbone::wishbone_enable(true);
 
-    // Setup the SPELL IO pins
-    for i in 8..16 {
-        mprj::set_io_mode(i, mprj::GPIO_MODE_USER_STD_BIDIRECTIONAL);
+    // Setup the SPELL IO pins: First four pins are outputs, next four are inputs
+    for i in 8..12 {
+        mprj::set_io_mode(i, mprj::GPIO_MODE_USER_STD_OUT_MONITORED);
+    }
+    for i in 12..16 {
+        mprj::set_io_mode(i, mprj::GPIO_MODE_MGMT_STD_OUT_MONITORED);
     }
 
     mprj::commit();
@@ -78,7 +81,70 @@ fn main() -> ! {
         spell::read_stack_top()
     );
 
-    // Test three: SPELL blinky
+    // Test three: IO pins as inputs
+    spell::write_sp(0);
+    spell::stack_push(0xf);
+    spell::stack_push(DDR);
+    spell::exec('w' as u8);
+
+    mprj::io_write(12, 0);
+    spell::stack_push(PIN);
+    spell::exec('r' as u8);
+    assert_eq!(spell::read_stack_top() & 0x10, 0); // IO4 should be low
+
+    mprj::io_write(12, 1);
+    spell::stack_push(PIN);
+    spell::exec('r' as u8);
+    assert_eq!(spell::read_stack_top() & 0x10, 0x10); // IO4 should be high
+
+    mprj::io_write(12, 0);
+    spell::stack_push(PIN);
+    spell::exec('r' as u8);
+    assert_eq!(spell::read_stack_top() & 0x10, 0); // IO4 should be low again
+
+    println!("✅ IO pin input test passed.");
+
+    // Test four: IO pins as outputs
+    spell::write_sp(0);
+    spell::stack_push(0x0f);
+    spell::stack_push(DDR);
+    spell::exec('w' as u8);
+
+    spell::stack_push(0x02);
+    spell::stack_push(PORT);
+    spell::exec('w' as u8);
+    assert_eq!(mprj::io_read(8), 0);
+    assert_eq!(mprj::io_read(9), 1);
+    assert_eq!(mprj::io_read(10), 0);
+    assert_eq!(mprj::io_read(11), 0);
+
+    spell::stack_push(0x03);
+    spell::stack_push(PIN);
+    spell::exec('w' as u8);
+    assert_eq!(mprj::io_read(8), 1);
+    assert_eq!(mprj::io_read(9), 0);
+    assert_eq!(mprj::io_read(10), 0);
+    assert_eq!(mprj::io_read(11), 0);
+
+    spell::stack_push(0x09);
+    spell::stack_push(PIN);
+    spell::exec('w' as u8);
+    assert_eq!(mprj::io_read(8), 0);
+    assert_eq!(mprj::io_read(9), 0);
+    assert_eq!(mprj::io_read(10), 0);
+    assert_eq!(mprj::io_read(11), 1);
+
+    spell::stack_push(0x07);
+    spell::stack_push(PIN);
+    spell::exec('w' as u8);
+    assert_eq!(mprj::io_read(8), 1);
+    assert_eq!(mprj::io_read(9), 1);
+    assert_eq!(mprj::io_read(10), 1);
+    assert_eq!(mprj::io_read(11), 1);
+
+    println!("✅ IO pin output test passed.");
+
+    // Test five: SPELL blinky
     spell::write_sp(0);
     spell::write_pc(0);
     #[rustfmt::skip]
