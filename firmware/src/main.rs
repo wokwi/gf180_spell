@@ -7,8 +7,12 @@ use riscv_rt::entry;
 
 mod delay;
 mod gpio;
+mod la;
 mod mprj;
 mod spell;
+mod spell_la;
+mod spell_state;
+use spell_state::SpellState;
 mod uart;
 mod wishbone;
 
@@ -30,6 +34,7 @@ fn main() -> ! {
     gpio::init();
     uart::init();
     wishbone::wishbone_enable(true);
+    la::enable_write(0xffff_ffff_0000_0000); // SPELL only uses the lower 32 bits of the LA
 
     // Setup the SPELL IO pins: First four pins are outputs, next four are inputs
     for i in 8..12 {
@@ -81,7 +86,25 @@ fn main() -> ! {
         spell::read_stack_top()
     );
 
-    // Test three: IO pins as inputs
+    // Test Logic Analyzer interface
+    spell::write_sp(0);
+    spell::write_progmem_byte(0x17, 0x42);
+    spell::write_pc(0x17);
+    spell::stack_push(0x55);
+    spell::exec('z' as u8); // Sleep
+    assert_eq!(
+        spell_la::cpu_status(),
+        spell_la::CPUStatus {
+            pc: 0x17,
+            opcode: 'z' as u8,
+            sp: 1,
+            state: SpellState::Sleep,
+            top: 0x55,
+        }
+    );
+    println!("✅ LA test passed",);
+
+    // Test IO pins as inputs
     spell::write_sp(0);
     spell::stack_push(0xf);
     spell::stack_push(DDR);
@@ -104,7 +127,7 @@ fn main() -> ! {
 
     println!("✅ IO pin input test passed.");
 
-    // Test four: IO pins as outputs
+    // Test IO pins as outputs
     spell::write_sp(0);
     spell::stack_push(0x0f);
     spell::stack_push(DDR);
@@ -144,7 +167,7 @@ fn main() -> ! {
 
     println!("✅ IO pin output test passed.");
 
-    // Test five: SPELL blinky
+    // Final test: SPELL blinky
     println!("☠️ Now running SPELL blinky.");
     spell::write_sp(0);
     spell::write_pc(0);
