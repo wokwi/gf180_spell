@@ -145,6 +145,7 @@ fn main() -> ! {
     println!("✅ IO pin output test passed.");
 
     // Test five: SPELL blinky
+    println!("☠️ Now running SPELL blinky.");
     spell::write_sp(0);
     spell::write_pc(0);
     #[rustfmt::skip]
