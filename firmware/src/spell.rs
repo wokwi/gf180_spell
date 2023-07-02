@@ -45,6 +45,7 @@ pub fn exec(opcode: u8) {
     unsafe {
         core::ptr::write_volatile(REG_EXEC as *mut u8, opcode);
     }
+    wait_until_done();
 }
 
 pub fn read_ctrl() -> u32 {
